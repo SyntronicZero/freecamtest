@@ -51,10 +51,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 
 func pan_camera(event: InputEvent) -> void:
-	var cam_basis = camera_location_z_node.global_basis
+	var cam_basis = camera_location_z_node.global_basis #gets the global basis of the camera node after the rotations
 	var up = cam_basis.y
 	var right= cam_basis.x
-	
+	#imma be honest idk why this works
 	var movement = -right * event.relative.x * MOUSE_SENSITIVITY * (zoom / 3) # I set mine at mouse_sensitivity = 0.0075
 	movement -= up * -event.relative.y *  MOUSE_SENSITIVITY * (zoom / 3)
 	
