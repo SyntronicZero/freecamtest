@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2ghb5wuku086"]
+
+[ext_resource type="Script" uid="uid://ksbttoqw3f4h" path="res://camera/free_cam.gd" id="1_upup2"]
+
+[node name="FreeCam" type="Node3D"]
+script = ExtResource("1_upup2")
+
+[node name="CameraRotationY" type="Node3D" parent="."]
+
+[node name="CameraRotationX" type="Node3D" parent="CameraRotationY"]
+
+[node name="CameraLocationZ" type="Node3D" parent="CameraRotationY/CameraRotationX"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraRotationY/CameraRotationX/CameraLocationZ"]
