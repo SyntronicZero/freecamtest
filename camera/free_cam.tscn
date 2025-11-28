@@ -11,8 +11,10 @@ script = ExtResource("1_upup2")
 [node name="CameraRotationX" type="Node3D" parent="CameraRotationY"]
 
 [node name="CameraLocationZ" type="Marker3D" parent="CameraRotationY/CameraRotationX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
 
 [node name="SmoothCamera" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
 script = ExtResource("2_3w2ck")
 follow_target = NodePath("../CameraRotationY/CameraRotationX/CameraLocationZ")
 
